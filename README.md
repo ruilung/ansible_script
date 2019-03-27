@@ -1,23 +1,19 @@
 # ansible_script
-
+for user didn't need to know how to use ansible. just execute a simple script and interactive with menu.
 
 inventory
 --------
-ansible inventory file
-contain host ip and group
-script will use groupname to make select menu
-and then reload nginx
+a example for ansible inventory. contain host ip and **group**. script will use groupname to make select menu and then reload nginx.
 
 
 ngxreload.yaml
 --------
-ansible playbook (yaml file)
-check nginx file and reload nginx with giving group
+ansible playbook (yaml file). check nginx file and reload nginx with giving groupname
 
 
 ngx_reload.sh
 ----------
-main part 
+**execute this.**
 
-execute this.
-choose group we want nginx to reload
+choose group we want server with nginx to reload
+
