@@ -1,0 +1,19 @@
+---
+- name: playbook nginx reload
+  hosts: "{{ var_hosts }}"
+  #remote_user: ray
+  gather_facts: False
+  become: true
+  become_method: sudo
+  become_user: root
+  tasks:
+    - name: nginx config check
+      command: nginx -t
+      changed_when: true
+      notify:
+        - nginx reloaded
+  handlers:
+    - name: nginx reloaded
+      service:
+        name: nginx
+        state: reloaded
